@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/******************** <main> ********************/
+.m-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.m-container h4 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.m-container-elem {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	width: 100%;
+}
+
+.m-container-elem dt {
+  padding: 8px 0;
+  color: #e40414;
+}
+
+.m-container-elem dt span {
+	color: #e40414;
+	font-size: 75%;
+}
+
+.m-container-elem dd {
+	margin: 0;
+}
+
+.m-container-elem dd
+  input[type="text"]{
+  border-style:None;
+  border-bottom: 2px solid #4b5456;
+	padding: 4px 8px;
+	width: 200px;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.pc-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.pc-container-elem {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.pc-container-elem-item {
+	display: flex;
+	width: 100%;
+}
+
+.item-box {
+  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.item-box-left {
+	display: flex;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.item-box-left img {
+	padding: 16px;
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  align-items: center;
+}
+
+.item-box-right {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+}
+
+.item-pid {
+	color: #4b5456;
+	width: 100%;
+}
+
+.item-name {
+	color: #4b5456;
+	width: 100%;
+}
+
+.item-price {
+	color: #e40414;
+	width: 100%;
+}
+
+.item-num {
+	color: #4b5456;
+	width: 100%;
+}
+
+.item-total {
+	color: #4b5456;
+  font-size: 16px;
+  /* padding-right:4px; */
+  font-weight: bold;
+  /* align-items: center; */
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.btn {
+	background-color: #fff;
+	border: 2px solid #e40414;
+	border-radius: 20px;
+	color: #e40414;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 4px 0;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	transition: .4s;
+  max-width: 120px;
+}
+
+.btn:hover {
+	background-color: #e40414;
+	border-color: #e40414;
+	color: #fff;
+}

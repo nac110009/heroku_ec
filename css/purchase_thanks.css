@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/******************** <main> ********************/
+/* purchase container */
+.pc-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.pc-container-elem {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.pc-container-elem-item {
+	display: flex;
+	width: 100%;
+}
+
+.item-box {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.item-box-left {
+	display: flex;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.item-box-left img {
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.item-box-right {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+}
+
+.item-pid {
+	color: #4b5456;
+	width: 100%;
+}
+
+.item-name {
+	color: #4b5456;
+	width: 100%;
+}
+
+.item-price {
+	color: #e40414;
+	width: 100%;
+}
+
+.item-num {
+	color: #4b5456;
+	width: 100%;
+}
+
+.item-total {
+	align-items: center;
+	color: #4b5456;
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	justify-content: center;
+	padding: 0 16px;
+}
+
+.container-btn {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+	width: 100%;
+}
+
+.btn {
+	background-color: #fff;
+	border: 2px solid #e40414;
+	border-radius: 20px;
+	color: #e40414;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 4px 0;
+	max-width: 200px;
+	padding: 4px 8px;
+	text-align: center;
+	text-decoration: none;
+	transition: .4s;
+	width: 100%;
+}
+
+.btn:hover {
+	background-color: #e40414;
+	border-color: #e40414;
+	color: #fff;
+}
+
+h4 {
+	border-bottom: solid 3px #e40414;
+  margin: 0;
+}
+
+.thanks-message {
+	display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+
+.order-date {
+	display: flex;
+	justify-content: center;
+  width: 100%;
+  font-size: 75%;
+  font-weight: bold;
+}
+
+.order-total {
+	display: flex;
+	justify-content: center;
+  width: 100%;
+  font-size: 75%;
+  font-weight: bold;
+  color: #e40414;
+}

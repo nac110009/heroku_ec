@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/******************** <main> ********************/
+.p-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.p-container-elem {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 12px 0;
+	width: 95%;
+}
+
+.p-container-elem-item {
+	display: flex;
+  flex-direction: column;
+	padding: 12px 0;
+  width: calc(100% / 3);
+  align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+	.p-container-elem-item {
+		width: calc(100% / 2);
+	}
+}
+
+.item-img {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.item-img img {
+  max-width: 240px;
+  max-height: 240px;
+  width: 100%;
+  height: auto;
+}
+
+.item-name {
+	color: #4b5456;
+	display: flex;
+	justify-content: center;
+	padding: 4px 0;
+	width: 90%;
+}
+
+.item-price {
+	color: #e40414;
+	display: flex;
+	justify-content: center;
+	padding: 4px 0;
+	width: 100%;
+}

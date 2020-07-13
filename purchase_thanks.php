@@ -98,7 +98,7 @@ $MemberID = $_COOKIE['MemberID'];
 
 //Refer to the Conversion Guide on customizing the data within this XML to display the proper conversion 
 //information within 
-$strTP  = "<img src='http://click.s10.exacttarget.com/conversion.aspx?xml=";
+$strTP  = "<img src='http://click.exacttarget.com/conversion.aspx?xml=";
 $strTP .= "<system><system_name>tracking</system_name><action>conversion</action>";
 $strTP .= "<member_id>".$MemberID."</member_id>";
 $strTP .= "<job_id>".$JobID."</job_id>";

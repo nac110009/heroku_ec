@@ -98,24 +98,24 @@ $MemberID = $_COOKIE['MemberID'];
 
 //Refer to the Conversion Guide on customizing the data within this XML to display the proper conversion 
 //information within 
-$strTP  = '<img src=\'http://click.exacttarget.com/conversion.aspx?xml=';
-$strTP .= '<system><system_name>tracking</system_name><action>conversion</action>';
-$strTP .= '<member_id>'.$MemberID.'</member_id>';
-$strTP .= '<job_id>'.$JobID.'</job_id>';
-$strTP .= '<email></email>';
-$strTP .= '<sub_id>'.$SubscriberID.'</sub_id>'; 
-$strTP .= '<list>'.$ListID.'</list>';
-$strTP .= '<original_link_id>'.$UrlID.'</original_link_id>';
-$strTP .= '<conversion_link_id>1</conversion_link_id>';
-$strTP .= '<link_alias>Alias</link_alias><display_order>1</display_order>';
-$strTP .= '<data_set>';
+$strTP  = "<img src='http://click.s10.exacttarget.com/conversion.aspx?xml=";
+$strTP .= "<system><system_name>tracking</system_name><action>conversion</action>";
+$strTP .= "<member_id>".$MemberID."</member_id>";
+$strTP .= "<job_id>".$JobID."</job_id>";
+$strTP .= "<email></email>";
+$strTP .= "<sub_id>".$SubscriberID."</sub_id>"; 
+$strTP .= "<list>".$ListID."</list>";
+$strTP .= "<original_link_id>".$UrlID."</original_link_id>";
+$strTP .= "<conversion_link_id>1</conversion_link_id>";
+$strTP .= "<link_alias>Alias</link_alias><display_order>1</display_order>";
+$strTP .= "<data_set>";
 foreach ($order_detail as $details) {
     $product_detail = $obj->get_product_detail($details['product_id']);
     $product_amt = $details['price'] * $details['number'];
     $strTP .= '<data amt="' . $product_amt . '" unit="Yen" accumulate="true" />';
 }
-$strTP .= '</data_set></system>\'';
-$strTP .= ' width="1" height="1">';
+$strTP .= "</data_set></system>'";
+$strTP .= " width='1' height='1'>";
 
 if ($debug=='on'){ 
     $strTP = '<textarea rows=10 cols=50>'.$strTP.'<textarea>'; 

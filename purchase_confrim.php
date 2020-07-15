@@ -139,10 +139,9 @@ var track_purchase = function () {
 
 <!-- MCコンバージョントラッキング（コンバージョンページ） -->
 <?php 
-print_r($_COOKIE);
+$debug = 'off'; 
 //This code should be on any confirmation page after the conversion is made. 
 //Refer to the Conversion Tracking Guide for customization. 
-$debug = 'off'; 
 $JobID = $_COOKIE['JobID']; 
 $SubscriberID = $_COOKIE['SubscriberID']; 
 $ListID = $_COOKIE['ListID']; 
@@ -162,9 +161,9 @@ $strTP .= "<list>".$ListID."</list>";
 $strTP .= "<BatchID>".$BatchID."</BatchID>";
 $strTP .= "<original_link_id>".$UrlID."</original_link_id>";
 $strTP .= "<conversion_link_id>1</conversion_link_id>";
-$strTP .= "<link_alias>Alias</link_alias><display_order>1</display_order>";
+$strTP .= "<link_alias>Confirm</link_alias><display_order>1</display_order>";
 $strTP .= "<data_set>";
-$strTP .= '<data amt="1" unit="Confirm" accumulate="true" />';
+$strTP .= '<data amt="1" unit="Confirms" accumulate="true" />';
 $strTP .= "</data_set></system>'";
 $strTP .= " width='1' height='1'>";
 

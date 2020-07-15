@@ -86,9 +86,9 @@ _etmc.push(["trackConversion", {"cart" : [<?= $cartStr; ?>],
 
 <!-- MCコンバージョントラッキング（コンバージョンページ） -->
 <?php 
+$debug = 'off'; 
 //This code should be on any confirmation page after the conversion is made. 
 //Refer to the Conversion Tracking Guide for customization. 
-$debug = 'off'; 
 $JobID = $_COOKIE['JobID']; 
 $SubscriberID = $_COOKIE['SubscriberID']; 
 $ListID = $_COOKIE['ListID']; 
@@ -107,13 +107,14 @@ $strTP .= "<sub_id>".$SubscriberID."</sub_id>";
 $strTP .= "<list>".$ListID."</list>";
 $strTP .= "<BatchID>".$BatchID."</BatchID>";
 $strTP .= "<original_link_id>".$UrlID."</original_link_id>";
-$strTP .= "<conversion_link_id>1</conversion_link_id>";
-$strTP .= "<link_alias>Alias</link_alias><display_order>1</display_order>";
+$strTP .= "<conversion_link_id>2</conversion_link_id>";
+$strTP .= "<link_alias>Purchase</link_alias><display_order>2</display_order>";
 $strTP .= "<data_set>";
 foreach ($order_detail as $details) {
     $product_detail = $obj->get_product_detail($details['product_id']);
     $product_amt = $details['price'] * $details['number'];
-    $strTP .= '<data amt="' . $product_amt . '" unit="Purchases" accumulate="true" />';
+    $strTP .= '<data amt="1" unit="Purchases" accumulate="true" />';
+    $strTP .= '<data amt="' . $product_amt . '" unit="Total Amount" accumulate="true" />';
 }
 $strTP .= "</data_set></system>'";
 $strTP .= " width='1' height='1'>";

@@ -45,6 +45,10 @@ if($_GET['j']) {
   $MemberID = $_GET['mid'];
   $BatchID = $_GET['jb'];
 
+// 動作環境に応じてsetcookieの書き方を変えてください。
+// 参考：PHPマニュアル：setcookie
+// https://www.php.net/manual/ja/function.setcookie.php
+// 例: setcookie('JobID', $JobID, time()+86400, "/", ".herokuapp.com", true, true);
   setcookie('JobID', $JobID);
   setcookie('SubscriberID', $SubscriberID);
   setcookie('ListID', $ListID);

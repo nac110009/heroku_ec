@@ -35,21 +35,6 @@ if (isset($_POST['add'])) {
 }
 ?>
 
-<?php
-// MCコンバージョントラッキング（ランディングページ）
-$JobID = $_GET['j']; 
-$SubscriberID = $_GET['sfmc_sub']; 
-$ListID = $_GET['l']; 
-$UrlID = $_GET['u']; 
-$MemberID = $_GET['mid']; 
- 
-setcookie('JobID', $JobID); 
-setcookie('SubscriberID', $SubscriberID); 
-setcookie('ListID', $ListID); 
-setcookie('UrlID', $UrlID); 
-setcookie('MemberID', $MemberID); 
-?> 
-
 <!Doctype html>
 <html lang="ja">
 
@@ -145,6 +130,23 @@ var track_cart = function () {
   }]);
 }
 </script>
+
+<?php
+// MCコンバージョントラッキング（ランディングページ）
+$JobID = $_GET['j']; 
+$SubscriberID = $_GET['sfmc_sub']; 
+$ListID = $_GET['l']; 
+$UrlID = $_GET['u']; 
+$MemberID = $_GET['mid']; 
+$BatchID = $_GET['jb']; 
+
+setcookie('JobID', $JobID); 
+setcookie('SubscriberID', $SubscriberID); 
+setcookie('ListID', $ListID); 
+setcookie('UrlID', $UrlID); 
+setcookie('MemberID', $MemberID); 
+setcookie('BatchID', $BatchID); 
+?> 
 
 </body>
 

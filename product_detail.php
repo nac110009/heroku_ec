@@ -37,19 +37,21 @@ if (isset($_POST['add'])) {
 
 <?php
 // MCコンバージョントラッキング（ランディングページ）
-$JobID = $_GET['j'];
-$SubscriberID = $_GET['sfmc_sub'];
-$ListID = $_GET['l'];
-$UrlID = $_GET['u'];
-$MemberID = $_GET['mid'];
-$BatchID = $_GET['jb'];
+if($_GET['j']) {
+  $JobID = $_GET['j'];
+  $SubscriberID = $_GET['sfmc_sub'];
+  $ListID = $_GET['l'];
+  $UrlID = $_GET['u'];
+  $MemberID = $_GET['mid'];
+  $BatchID = $_GET['jb'];
 
-setcookie('JobID', $JobID, time()+86400, "/");
-setcookie('SubscriberID', $SubscriberID, time()+86400, "/");
-setcookie('ListID', $ListID, time()+86400, "/");
-setcookie('BatchID', $BatchID, time()+86400, "/");
-setcookie('UrlID', $UrlID, time()+86400, "/");
-setcookie('MemberID', $MemberID, time()+86400, "/");
+  setcookie('JobID', $JobID);
+  setcookie('SubscriberID', $SubscriberID);
+  setcookie('ListID', $ListID);
+  setcookie('BatchID', $BatchID);
+  setcookie('UrlID', $UrlID);
+  setcookie('MemberID', $MemberID);
+}
 ?> 
 
 <!Doctype html>

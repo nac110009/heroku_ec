@@ -133,19 +133,19 @@ var track_cart = function () {
 
 <?php
 // MCコンバージョントラッキング（ランディングページ）
-$JobID = $_GET['j']; 
-$SubscriberID = $_GET['sfmc_sub']; 
-$ListID = $_GET['l']; 
-$UrlID = $_GET['u']; 
-$MemberID = $_GET['mid']; 
-$BatchID = $_GET['jb']; 
+$JobID = $_GET['j'];
+$SubscriberID = $_GET['sfmc_sub'];
+$ListID = $_GET['l'];
+$UrlID = $_GET['u'];
+$MemberID = $_GET['mid'];
+$BatchID = $_GET['jb'];
 
-setcookie('JobID', $JobID); 
-setcookie('SubscriberID', $SubscriberID); 
-setcookie('ListID', $ListID); 
-setcookie('UrlID', $UrlID); 
-setcookie('MemberID', $MemberID); 
-setcookie('BatchID', $BatchID); 
+setcookie('JobID', $JobID);
+setcookie('SubscriberID', $SubscriberID);
+setcookie('ListID', $ListID);
+setcookie('UrlID', $UrlID);
+setcookie('MemberID', $MemberID);
+setcookie('BatchID', $BatchID);
 ?> 
 
 </body>

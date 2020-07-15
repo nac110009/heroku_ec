@@ -98,7 +98,7 @@ $MemberID = $_COOKIE['MemberID'];
 
 //Refer to the Conversion Guide on customizing the data within this XML to display the proper conversion 
 //information within 
-$strTP  = "<img src='http://click.s10.exacttarget.com/conversion.aspx?xml=";
+$strTP  = "<img src='http://click.exacttarget.com/conversion.aspx?xml=";
 $strTP .= "<system><system_name>tracking</system_name><action>conversion</action>";
 $strTP .= "<member_id>".$MemberID."</member_id>";
 $strTP .= "<job_id>".$JobID."</job_id>";
@@ -112,7 +112,7 @@ $strTP .= "<data_set>";
 foreach ($order_detail as $details) {
     $product_detail = $obj->get_product_detail($details['product_id']);
     $product_amt = $details['price'] * $details['number'];
-    $strTP .= '<data amt="' . $product_amt . '" unit="Yen" accumulate="true" />';
+    $strTP .= '<data amt="' . $product_amt . '" unit="Purchases" accumulate="true" />';
 }
 $strTP .= "</data_set></system>'";
 $strTP .= " width='1' height='1'>";

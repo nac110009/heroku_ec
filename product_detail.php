@@ -146,57 +146,6 @@ var track_cart = function () {
 }
 </script>
 
-<!-- MCコンバージョントラッキング（ランディングページ） -->
-<script language="javascript">
-//Set the number of days before your cookie should expire
-var ExpireDays = 90;
-//Do not change anything below this line
-qstr = document.location.search;
-qstr = qstr.substring(1,qstr.length)
-function SetCookie(cookieName,cookieValue,nDays)
-{
-	var today = new Date();
-	var expire = new Date();
-	if (nDays==null || nDays==0) nDays=1;
-	expire.setTime(today.getTime() + 3600000*24*nDays);
-	document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();
-   }
-   
-   thevars = qstr.split("&");
-		for(i=0;i<thevars.length;i++) {
-			switch(thevars[i]) {
-				case "sfmc_sub":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
-					SetCookie("SubscriberID",sfmc_sub,ExpireDays);
-					break;
-				case "j":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
-					SetCookie("JobID",j,ExpireDays);
-					break;
-				case "l":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
-					SetCookie("ListID",l,ExpireDays);
-					break;
-				case "u":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
-					SetCookie("UrlID",u,ExpireDays);
-					break;
-				case "mid":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
-					SetCookie("MemberID",mid,ExpireDays);
-					break;
-				default:
-					eval(thevars[i]);
-					break;
-			}
-}
-</script>
-
 </body>
 
 </html>

@@ -140,12 +140,12 @@ $UrlID = $_GET['u'];
 $MemberID = $_GET['mid'];
 $BatchID = $_GET['jb'];
 
-setcookie('JobID', $JobID);
-setcookie('SubscriberID', $SubscriberID);
-setcookie('ListID', $ListID);
-setcookie('UrlID', $UrlID);
-setcookie('MemberID', $MemberID);
-setcookie('BatchID', $BatchID);
+setcookie('JobID', $JobID, time()+86400, "/");
+setcookie('SubscriberID', $SubscriberID, time()+86400, "/");
+setcookie('ListID', $ListID, time()+86400, "/");
+setcookie('BatchID', $BatchID, time()+86400, "/");
+setcookie('UrlID', $UrlID, time()+86400, "/");
+setcookie('MemberID', $MemberID, time()+86400, "/");
 ?> 
 
 </body>

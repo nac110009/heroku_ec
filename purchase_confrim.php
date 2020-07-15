@@ -139,6 +139,7 @@ var track_purchase = function () {
 
 <!-- MCコンバージョントラッキング（コンバージョンページ） -->
 <?php 
+print_r($_COOKIE);
 //This code should be on any confirmation page after the conversion is made. 
 //Refer to the Conversion Tracking Guide for customization. 
 $debug = 'off'; 

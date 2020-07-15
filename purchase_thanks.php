@@ -105,6 +105,7 @@ $strTP .= "<job_id>".$JobID."</job_id>";
 $strTP .= "<email></email>";
 $strTP .= "<sub_id>".$SubscriberID."</sub_id>"; 
 $strTP .= "<list>".$ListID."</list>";
+$strTP .= "<BatchID>".$BatchID."</BatchID>";
 $strTP .= "<original_link_id>".$UrlID."</original_link_id>";
 $strTP .= "<conversion_link_id>1</conversion_link_id>";
 $strTP .= "<link_alias>Alias</link_alias><display_order>1</display_order>";

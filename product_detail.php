@@ -92,23 +92,18 @@ alert("thevars: key=" + element[0] + "; val=" + element[1] + ";");
 					SetCookie("SubscriberID",element[1],ExpireDays);
 					break;
 				case "j":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
 					SetCookie("JobID",element[1],ExpireDays);
 					break;
 				case "l":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
 					SetCookie("ListID",element[1],ExpireDays);
 					break;
 				case "u":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
 					SetCookie("UrlID",element[1],ExpireDays);
 					break;
+				case "jb":
+					SetCookie("BatchID",element[1],ExpireDays);
+					break;
 				case "mid":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
 					SetCookie("MemberID",element[1],ExpireDays);
 					break;
 				default:

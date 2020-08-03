@@ -110,12 +110,15 @@ $strTP .= "<original_link_id>".$UrlID."</original_link_id>";
 $strTP .= "<conversion_link_id>2</conversion_link_id>";
 $strTP .= "<link_alias>Purchase</link_alias><display_order>2</display_order>";
 $strTP .= "<data_set>";
+$strTP .= '<data amt="1" unit="Purchases" accumulate="true" />';
+$strTP .= '<data amt="' . $headers['total_price'] . '" unit="Total Amount" accumulate="true" />';
+/*
 foreach ($order_detail as $details) {
     $product_detail = $obj->get_product_detail($details['product_id']);
     $product_amt = $details['price'] * $details['number'];
-    $strTP .= '<data amt="1" unit="Purchases" accumulate="true" />';
-    $strTP .= '<data amt="' . $product_amt . '" unit="Total Amount" accumulate="true" />';
+    $strTP .= '<data amt="' . $product_amt . '" unit="' . $product_detail . '" accumulate="true" />';
 }
+*/
 $strTP .= "</data_set></system>'";
 $strTP .= " width='1' height='1'>";
 

@@ -74,10 +74,8 @@ var ExpireDays = 90;
 //Do not change anything below this line
 qstr = document.location.search;
 qstr = qstr.substring(1,qstr.length)
-alert("qstr=" + qstr);
 function SetCookie(cookieName,cookieValue,nDays)
 {
-alert("SetCookie: " + cookieName + "=" + cookieValue);
 	var today = new Date();
 	var expire = new Date();
 	if (nDays==null || nDays==0) nDays=1;
@@ -87,6 +85,7 @@ alert("SetCookie: " + cookieName + "=" + cookieValue);
    
    thevars = qstr.split("&");
 		for(i=0;i<thevars.length;i++) {
+alert("thevars: " + thevars[i]);
 			switch(thevars[i]) {
 				case "sfmc_sub":
 					thevars[i] = thevars[i].replace("=","='")+"'";

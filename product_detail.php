@@ -86,7 +86,7 @@ function SetCookie(cookieName,cookieValue,nDays)
    thevars = qstr.split("&");
 		for(i=0;i<thevars.length;i++) {
 			var element = thevars[i].split('=');
-alert("thevars: key=" + element[0] + "; val=" + element[0] + ";");
+alert("thevars: key=" + element[0] + "; val=" + element[1] + ";");
 			switch(element[0]) {
 				case "sfmc_sub":
 					SetCookie("SubscriberID",element[1],ExpireDays);
@@ -112,7 +112,6 @@ alert("thevars: key=" + element[0] + "; val=" + element[0] + ";");
 					SetCookie("MemberID",element[1],ExpireDays);
 					break;
 				default:
-					eval(thevars[i]);
 					break;
 			}
 }

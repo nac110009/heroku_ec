@@ -85,32 +85,31 @@ function SetCookie(cookieName,cookieValue,nDays)
    
    thevars = qstr.split("&");
 		for(i=0;i<thevars.length;i++) {
-alert("thevars: " + thevars[i]);
-			switch(thevars[i]) {
+			var element = thevars[i].split('=');
+alert("thevars: key=" + element[0] + "; val=" + element[0] + ";");
+			switch(element[0]) {
 				case "sfmc_sub":
-					thevars[i] = thevars[i].replace("=","='")+"'";
-					eval(thevars[i]);
-					SetCookie("SubscriberID",sfmc_sub,ExpireDays);
+					SetCookie("SubscriberID",element[1],ExpireDays);
 					break;
 				case "j":
 					thevars[i] = thevars[i].replace("=","='")+"'";
 					eval(thevars[i]);
-					SetCookie("JobID",j,ExpireDays);
+					SetCookie("JobID",element[1],ExpireDays);
 					break;
 				case "l":
 					thevars[i] = thevars[i].replace("=","='")+"'";
 					eval(thevars[i]);
-					SetCookie("ListID",l,ExpireDays);
+					SetCookie("ListID",element[1],ExpireDays);
 					break;
 				case "u":
 					thevars[i] = thevars[i].replace("=","='")+"'";
 					eval(thevars[i]);
-					SetCookie("UrlID",u,ExpireDays);
+					SetCookie("UrlID",element[1],ExpireDays);
 					break;
 				case "mid":
 					thevars[i] = thevars[i].replace("=","='")+"'";
 					eval(thevars[i]);
-					SetCookie("MemberID",mid,ExpireDays);
+					SetCookie("MemberID",element[1],ExpireDays);
 					break;
 				default:
 					eval(thevars[i]);

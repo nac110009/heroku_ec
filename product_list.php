@@ -47,27 +47,6 @@ if (isset($_GET['search'])) {
   </main>
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
 
-<!-- MC Collect Tracking Code -->
-<script type="text/javascript">
-_etmc.push(["setOrgId", "100019644"]);
-// Insert/Update Content Catalog
-_etmc.push(["updateItem",
-  {
-    "item_type": "content",
-    "item": "<?= (empty($search_char)) ? "PRODUCT_LIST" : "PRODUCT_SEARCH_" . md5($search_char); ?>",
-    "url": "https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>",
-    "available": "Y"
-  }
-]);
-// Tracking Page
-_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
-_etmc.push(["trackPageView", {"search" : "<?= $search_char; ?>"}]);
-</script>
-
-<!-- MC Tracking Tag (Add/Modify Content Data) -->
-<script type="text/javascript">
-</script>
-
 </body>
 
 </html>

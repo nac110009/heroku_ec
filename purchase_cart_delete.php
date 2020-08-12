@@ -25,20 +25,6 @@ if (empty($member_id)) {
   } else {
     // 商品を全削除
     $obj->delete_cart($member_id);
-/*
-    // DEからLINE UIDを取得
-    $lineMsg = new Data_Extension();
-    $lineUid = $lineMsg->getLineUid($member_id);
-    // LINEメッセージの送信
-    $lineMsg = new Send_LINE_Message();
-    $lineMsg->setLineUid($lineUid);
-    $lineMsg->setTextMessage("LINEテスト実施中");
-    $lineMsg->sendLineMsg();
-*/
-    // LINEメッセージの送信
-    $journey = new Journey_Entry();
-    $journey->setMemberInfo($_SESSION['member_info']);
-    $journey->entry();
   }
 }
 

@@ -80,33 +80,6 @@ $cart_total_price = $obj->get_cart_total_price($member_id);
   </main>
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
 
-<!-- MC Tracking Tag (Track Shopping Cart) -->
-<?php
-  $cartStr = "";
-  foreach ($cart_list as $row) {
-  	$details = $obj->get_product_detail($row['product_id']);
-  	if (strlen($cartStr) > 0) $cartStr .= ",";
-  	$cartStr .= "{";
-  	$cartStr .= "\"item\" : \"" . $details['product_id'] . "\",";
-  	$cartStr .= "\"quantity\" : \"" . $row['number'] . "\",";
-  	$cartStr .= "\"price\" : \"" . $details['price'] . "\"";
-  	$cartStr .= "}";
-  }
-?>
-<script type="text/javascript">
-_etmc.push(["setOrgId", "100019644"]);
-_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
-_etmc.push(["trackCart", {"cart" : [<?= $cartStr; ?>]}]);
-</script>
-
-<!-- MC Tracking Tag (Delete Shopping Cart) -->
-<script type="text/javascript">
-var delete_cart = function () {
-  _etmc.push(["setOrgId", "100019644"]);
-  _etmc.push(["trackCart", {"clear_cart": true}]);
-}
-</script>
-
 </body>
 
 </html>

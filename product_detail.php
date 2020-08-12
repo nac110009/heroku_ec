@@ -35,31 +35,6 @@ if (isset($_POST['add'])) {
 }
 ?>
 
-<?php
-// MCコンバージョントラッキング（ランディングページ）
-/*
-if($_GET['j']) {
-  $JobID = $_GET['j'];
-  $SubscriberID = $_GET['sfmc_sub'];
-  $ListID = $_GET['l'];
-  $UrlID = $_GET['u'];
-  $MemberID = $_GET['mid'];
-  $BatchID = $_GET['jb'];
-
-// 動作環境に応じてsetcookieの書き方を変えてください。
-// 参考：PHPマニュアル：setcookie
-// https://www.php.net/manual/ja/function.setcookie.php
-// 例: setcookie('JobID', $JobID, time()+86400, "/", ".herokuapp.com", true, true);
-  setcookie('JobID', $JobID);
-  setcookie('SubscriberID', $SubscriberID);
-  setcookie('ListID', $ListID);
-  setcookie('BatchID', $BatchID);
-  setcookie('UrlID', $UrlID);
-  setcookie('MemberID', $MemberID);
-}
-*/
-?> 
-
 <!Doctype html>
 <html lang="ja">
 
@@ -67,50 +42,6 @@ if($_GET['j']) {
   <title>Heroku_ecサイト | 商品詳細：<?= $obj->h($product_detail['product_name']); ?></title>
   <?php include('include/inc_tag_head.php'); ?>
   <link href="css/product_detail.css" rel="stylesheet" type="text/css">
-
-<script language="javascript">
-//Set the number of days before your cookie should expire
-var ExpireDays = 90;
-//Do not change anything below this line
-qstr = document.location.search;
-qstr = qstr.substring(1,qstr.length)
-function SetCookie(cookieName,cookieValue,nDays)
-{
-	var today = new Date();
-	var expire = new Date();
-	if (nDays==null || nDays==0) nDays=1;
-	expire.setTime(today.getTime() + 3600000*24*nDays);
-	document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();
-   }
-   
-   thevars = qstr.split("&");
-		for(i=0;i<thevars.length;i++) {
-			var element = thevars[i].split('=');
-			switch(element[0]) {
-				case "sfmc_sub":
-					SetCookie("SubscriberID",element[1],ExpireDays);
-					break;
-				case "j":
-					SetCookie("JobID",element[1],ExpireDays);
-					break;
-				case "l":
-					SetCookie("ListID",element[1],ExpireDays);
-					break;
-				case "u":
-					SetCookie("UrlID",element[1],ExpireDays);
-					break;
-				case "jb":
-					SetCookie("BatchID",element[1],ExpireDays);
-					break;
-				case "mid":
-					SetCookie("MemberID",element[1],ExpireDays);
-					break;
-				default:
-					break;
-			}
-}
-</script>
-
 </head><!-- メタ情報やCSSのリンク先を読み込み -->
 
 <body>
@@ -151,54 +82,6 @@ function SetCookie(cookieName,cookieValue,nDays)
     </div>
   </main>
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
-
-<!-- MC Collect Tracking Code -->
-<script type="text/javascript">
-_etmc.push(["setOrgId", "100019644"]);
-// Insert/Update Product Catalog
-_etmc.push(["updateItem",
-  {
-    "item_type": "product",
-    "item": "<?= $product_detail['product_id']; ?>",
-    "name": "<?= $product_detail['product_name']; ?>",
-    "url": "https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>",
-    "unique_id": "<?= $product_detail['product_id']; ?>",
-    "available": "Y",
-    "sale_price": "<?= $product_detail['price']; ?>",
-    "RegularKakaku": "<?= $product_detail['price']; ?>",
-    "RegularKakaku_dot": "Y",
-    "SaleKakaku": "<?= $product_detail['price']; ?>",
-    "SaleKakaku_dot": "Y",
-    "description": "<?= $product_detail['description']; ?>"
-  }
-]);
-// Insert/Update Content Catalog
-_etmc.push(["updateItem",
-  {
-    "item_type": "content",
-    "item": "PRODUCT_DETAIL_<?= $product_detail['product_id']; ?>",
-    "url": "https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>",
-    "available": "Y"
-  }
-]);
-// Tracking Page
-_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
-_etmc.push(["trackPageView", {"item" : "<?= $product_detail['product_id']; ?>"}]);
-</script>
-
-<!-- MC Collect Tracking Code (Button Action) -->
-<script type="text/javascript">
-var track_cart = function () {
-//  _etmc.push(["trackPageView", {"item" : "<?= $product_detail['product_id']; ?>"}]);
-  _etmc.push(["trackEvent", {"name" : "CartInsert",
-    "details" : {
-      "email" : "<?= $_SESSION['member_info']['mail']; ?>",
-      "item" : "<?= $product_detail['product_id']; ?>",
-      "name" : "<?= $product_detail['product_id']; ?>"
-    }
-  }]);
-}
-</script>
 
 </body>
 

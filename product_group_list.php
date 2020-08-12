@@ -42,23 +42,6 @@ if (empty($product_list)) {
   </main>
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
 
-<!-- MC Collect Tracking Code -->
-<script type="text/javascript">
-_etmc.push(["setOrgId", "100019644"]);
-// Insert/Update Content Catalog
-_etmc.push(["updateItem",
-  {
-    "item_type": "content",
-    "item": "PRODUCT_CATEGORY_<?= md5($group_char); ?>",
-    "url": "https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>",
-    "available": "Y"
-  }
-]);
-// Tracking Page
-_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
-_etmc.push(["trackPageView", {"category" : "<?= $group_char; ?>"}]);
-</script>
-
 </body>
 
 </html>

@@ -63,7 +63,7 @@ $order_header = $obj->get_order_header($order_id, $is_history = 'false');
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
 
 <!-- MC Collect Tracking Code -->
-<script type="text/javascript">
+<script>
 _etmc.push(["setOrgId", "100019644"]);
 _etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
 _etmc.push(["trackPageView"]);
@@ -82,14 +82,14 @@ _etmc.push(["trackPageView"]);
   	$cartStr .= "}";
   }
 ?>
-<script type="text/javascript">
+<script>
   var items = [];
       items.push({
 
-      "item" : "030081",
+      "item" : "EG026",
       "quantity": "1",
       "price" : "2457",
-      "unique_id": "030081"
+      "unique_id": "EG026"
 
     });
 _etmc.push(["setOrgId", "100019644"]);

@@ -62,6 +62,28 @@ $order_header = $obj->get_order_header($order_id, $is_history = 'false');
   </main>
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
 
+<!-- MC Tracking Tag (Track Purchase Details) -->
+<?php
+  $cartStr = "";
+  foreach ($order_detail as $row) {
+  	$details = $obj->get_product_detail($row['product_id']);
+  	if (strlen($cartStr) > 0) $cartStr .= ",";
+  	$cartStr .= "{";
+  	$cartStr .= "\"item\" : \"" . $details['product_id'] . "\",";
+  	$cartStr .= "\"quantity\" : \"" . $row['number'] . "\",";
+  	$cartStr .= "\"price\" : \"" . $details['price'] . "\",";
+  	$cartStr .= "\"unique_id\" : \"" . $details['product_id'] . "\"";
+  	$cartStr .= "}";
+  }
+?>
+<script type="text/javascript">
+_etmc.push(["setOrgId", "100019644"]);
+_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
+_etmc.push(["trackConversion", {"cart" : [<?= $cartStr; ?>],
+  "order_number" : "<?= $headers['order_id']; ?>"
+}]);
+</script>
+
 </body>
 
 </html>

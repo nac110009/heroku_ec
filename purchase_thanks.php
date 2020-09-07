@@ -86,13 +86,14 @@ _etmc.push(["trackPageView"]);
   var items = [];
       items.push({
 
-      "item" : "EG026",
+      "item" : "030081",
       "quantity": "1",
       "price" : "2457",
-      "unique_id": "EG026"
+      "unique_id": "030081"
 
     });
 _etmc.push(["setOrgId", "100019644"]);
+_etmc.push(["trackPageView"]);
 _etmc.push(["trackConversion", {"cart" : JSON.stringify(items)}]);
 </script>
 

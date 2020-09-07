@@ -84,6 +84,7 @@ _etmc.push(["trackPageView"]);
 ?>
 <script type="text/javascript">
 _etmc.push(["setOrgId", "100019644"]);
+_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
 _etmc.push(["trackConversion", {"cart" : [<?= $cartStr; ?>],
   "order_number" : "<?= $headers['order_id']; ?>"
 }]);

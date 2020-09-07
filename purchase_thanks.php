@@ -83,11 +83,17 @@ _etmc.push(["trackPageView"]);
   }
 ?>
 <script type="text/javascript">
+  var items = [];
+      items.push({
+
+      "item" : "EG026",
+      "quantity": "1",
+      "price" : "2457",
+      "unique_id": "EG026"
+
+    });
 _etmc.push(["setOrgId", "100019644"]);
-_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
-_etmc.push(["trackConversion", {"cart" : [<?= $cartStr; ?>],
-  "order_number" : "<?= $headers['order_id']; ?>"
-}]);
+_etmc.push(["trackConversion", {"cart" : JSON.stringify(items)}]);
 </script>
 
 </body>

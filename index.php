@@ -24,8 +24,8 @@ function SetCookie(cookieName,cookieValue,nDays)
 	var expire = new Date();
 	if (nDays==null || nDays==0) nDays=1;
 	expire.setTime(today.getTime() + 3600000*24*nDays);
-	document.cookie = cookieName+"="+escape(cookieValue)+ ";domain=cotta.jp;expires="+expire.toGMTString();
-	document.cookie = cookieName+"="+escape(cookieValue)+ ";domain=www.cotta.jp;expires="+expire.toGMTString();
+	document.cookie = cookieName+"="+escape(cookieValue)+ ";domain=damp-ocean-97207.herokuapp.com;expires="+expire.toGMTString();
+	document.cookie = cookieName+"="+escape(cookieValue)+ ";domain=damp-97207.herokuapp.com;expires="+expire.toGMTString();
 }
 
 thevars = qstr.split("&");

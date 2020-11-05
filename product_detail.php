@@ -83,6 +83,25 @@ if (isset($_POST['add'])) {
   </main>
   <footer><?php include('include/inc_tag_footer.php'); ?></footer><!-- フッターの読み込み -->
 
+<!-- MC Collect Tracking Code -->
+<script type="text/javascript">
+_etmc.push(["setOrgId", "100019644"]);
+_etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"}]);
+// Insert/Update Content Catalog
+<?php if (isset($_POST['add'])) { ?>
+_etmc.push(["updateItem",
+  {
+    "item_type": "content",
+    "item": "PRODUCT_DETAIL_<?= $product_detail['product_id']; ?>",
+    "url": "https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>",
+    "available": 1
+  }
+]);
+<?php } ?>
+// Tracking Page
+_etmc.push(["trackPageView", {"item" : "<?= $product_detail['product_id']; ?>"}]);
+</script>
+
 </body>
 
 </html>

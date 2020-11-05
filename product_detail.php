@@ -92,7 +92,7 @@ _etmc.push(["setUserInfo", {"email" : "<?= $_SESSION['member_info']['mail']; ?>"
 _etmc.push(["updateItem",
   {
     "item_type": "content",
-    "item": "PRODUCT_DETAIL_<?= $product_detail['product_id']; ?>",
+    "item": "c_<?= $product_detail['product_id']; ?>",
     "url": "https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>",
     "available": 1
   }

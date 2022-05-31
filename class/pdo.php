@@ -6,9 +6,9 @@
    */
 function get_pdo()
 {
-  $dsn = 'pgsql:host=ec2-23-23-182-18.compute-1.amazonaws.com options=\'--client_encoding=UTF8\'; dbname=d10s0ratom3vis';
-  $username = 'hkpkqyzdpucciw';
-  $password = '984d13bb9ce61645eb3cdd11964347bf8657d28b28f61d069f1a98e375ee1085';
+  $dsn = 'pgsql:host=ec2-35-169-37-64.compute-1.amazonaws.com options=\'--client_encoding=UTF8\'; dbname=df4tpusuv0mai1';
+  $username = 'nkfjcruoqytugb';
+  $password = '9239554344ac10d5e6bccbe422c1dcbcb6d06907e57437639010629e49e6218c';
   $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

@@ -5,4 +5,4 @@
   <link href="css/luxbar.css" rel="stylesheet">
   <link href="css/recommend.css" rel="stylesheet">
   <script type="text/javascript" src="//100019644.collect.igodigital.com/collect.js"></script>
-  <script type="text/javascript" src="//cdn.evgnet.com/beacon/naccoltd/tsujitest01/scripts/evergage.min.js"></script>
+  <script type="text/javascript" async src="//cdn.evgnet.com/beacon/naccoltd/tsujitest01/scripts/evergage.min.js"></script>

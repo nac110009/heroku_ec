@@ -41,12 +41,12 @@ if (isset($_POST['login'])) {
         <form action="" method="post">
           <dl>
             <dt>メールアドレス</dt>
-            <dd><input type="email" name="mail" maxlength="255" value="<?php if (!empty($input_mail)) echo $obj->h($input_mail); ?>" required></dd>
+            <dd><input type="email" name="mail" maxlength="255" value="<?php if (!empty($input_mail)) echo $obj->h($input_mail); ?>" class="login_email" required></dd>
             <dt>パスワード<span>≪半角英数≫<span></dt>
             <dd><input type="password" name="password" maxlength="20" pattern="^[0-9A-Za-z]+$" required></dd>
           </dl>
           <div class="container-btn">
-            <input type="submit" name="login" value="ログイン" class="btn">
+            <input type="submit" name="login" value="ログイン" class="btn login">
           </div>
         </form>
       </div>

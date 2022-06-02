@@ -72,7 +72,7 @@ if (isset($_POST['add'])) {
               <?php endfor; ?>
             </select>
             <div class="container-btn">
-              <input type="submit" name="add" value="カートに追加する" class="btn" onclick="track_cart()">
+              <input type="submit" name="add" value="カートに追加する" class="btn add-cart" onclick="track_cart()">
               <input type="button" onclick="history.back()" value="戻る" class="btn">
             </div>
           </form>

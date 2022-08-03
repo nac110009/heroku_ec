@@ -66,9 +66,10 @@ if (isset($_POST['add'])) {
         <div class="item-txt"><?= $obj->h($product_detail['description']); ?></div>
         <div class="item-form">
           <form action="" method="post">
-            <select id="cntnum" name="number" class="select">
+            <select id="cntnum" name="number" class="select quantity-select">
               <?php for ($i = 1; $i <= 99; $i++) : ?>
-                <option value="<?= $i ?>"><?= $i ?></option>
+                <?php $sel = ($i == 1) ? ' selected' : '' ?>
+                <option value="<?= $i ?>"<?= $sel ?>><?= $i ?></option>
               <?php endfor; ?>
             </select>
             <div class="container-btn">

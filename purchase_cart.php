@@ -7,7 +7,7 @@ if (empty($_SESSION['member_info'])) {
 }
 
 $member_id = $_SESSION['member_info']['member_id'];
-$message = '<div class=".cart-empty">商品が追加されていません。</div>';
+$message = '<div class="cart-empty">商品が追加されていません。</div>';
 
 $cart_list = $obj->get_cart_list($member_id);
 $cart_total_price = $obj->get_cart_total_price($member_id);
